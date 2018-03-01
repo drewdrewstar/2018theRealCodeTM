@@ -145,6 +145,10 @@ public class Robot extends IterativeRobot {
 			if (leftJoystick.getRawButton(1) ==  true){
 				shooter.Load();
 			}
+			//Shooting the cube
+			if (rightJoystick.getRawButton(1) == true){
+				pneumatics.pushOut2();
+			}
 			
 			//Limit Switch Fun
 			if (isSwitchPushed == false){
@@ -166,11 +170,11 @@ public class Robot extends IterativeRobot {
 				inOut.Stop();
 			}
 			
-			//Push grabber Piston Out
+			//Push grabber pistons Out
 			if (rightJoystick.getRawButton(8) == true){
 				pneumatics.pushOut1();
 			}
-			//Pull grabber piston in
+			//Pull grabber pistons in
 			if (rightJoystick.getRawButton(9) == true){
 				pneumatics.pullIn1();
 			}
